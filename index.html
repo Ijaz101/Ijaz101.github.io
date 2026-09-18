@@ -1,142 +1,1388 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ijaz | Data Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ijaz | Power BI Developer | Data Analyst</title>
+
+  <meta
+    name="description"
+    content="Ijaz is a PL-300 certified aspiring Power BI Developer and Data Analyst skilled in Power BI, SQL and Excel, focused on business intelligence, data storytelling and actionable insights."
+  >
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 40px;
-      line-height: 1.6;
+      padding: 30px 25px;
+      line-height: 1.7;
       background-color: #f4f6f8;
       color: #2c3e50;
     }
-    h1, h2 {
+
+    h1, h2, h3 {
       color: #1f3b5a;
     }
+
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0;
+      font-size: 3.1em;
+      margin: 0;
+      line-height: 1.2;
     }
+
     h2 {
+      font-size: 1.8em;
       border-bottom: 2px solid #2980b9;
-      padding-bottom: 5px;
+      padding-bottom: 7px;
+      margin-top: 50px;
     }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
+
+    h3 {
+      margin-bottom: 8px;
     }
-    .project {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    p {
+      margin-top: 8px;
     }
+
     a {
       color: #2980b9;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-top: 10px;
+
+    ul {
+      padding-left: 22px;
     }
-    .contact {
-      background-color: #fff;
-      padding: 15px;
+
+    /* HERO */
+
+    .hero {
+      background: #ffffff;
+      padding: 45px 40px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .hero-role {
+      color: #2980b9;
+      font-size: 1.35em;
+      font-weight: 700;
+      margin: 8px 0 18px;
+    }
+
+    .hero-description {
+      font-size: 1.08em;
+      max-width: 900px;
+    }
+
+    .certification {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 11px 17px;
+      background: #eef6fb;
+      border-left: 4px solid #2980b9;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      background: #2980b9;
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
+
+    .skill-card.primary {
+      border-top: 5px solid #2980b9;
+    }
+
+    .skill-label {
+      color: #2980b9;
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .skill-card h3 {
+      margin-top: 6px;
+      font-size: 1.35em;
+    }
+
+    /* STORYTELLING */
+
+    .story {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
+
+    .story-step {
+      padding: 15px 0;
+      border-bottom: 1px solid #e5e9ed;
+    }
+
+    .story-step:last-child {
+      border-bottom: none;
+    }
+
+    .story-step strong {
+      color: #1f3b5a;
+      font-size: 1.08em;
+    }
+
+    /* FEATURED PROJECT */
+
+    .project {
+      background: #ffffff;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.08);
+    }
+
+    .featured {
+      border-top: 6px solid #2980b9;
+    }
+
+    .project-label {
+      display: inline-block;
+      color: #2980b9;
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .project h3 {
+      font-size: 1.55em;
+      margin-top: 4px;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border: 1px solid #dfe4e8;
+    }
+
+    /* METRICS */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .metric {
+      background: #f4f8fb;
+      padding: 20px 15px;
+      text-align: center;
+      border-radius: 8px;
+      border-top: 3px solid #2980b9;
+    }
+
+    .metric-number {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #1f3b5a;
+      display: block;
+    }
+
+    .metric-label {
+      font-size: 0.9em;
+    }
+
+    /* BUSINESS IMPACT */
+
+    .impact {
+      background: #f4f8fb;
+      padding: 22px;
+      margin-top: 22px;
+      border-left: 4px solid #2980b9;
+      border-radius: 5px;
+    }
+
+    .impact h3 {
+      margin-top: 0;
+    }
+
+    /* INSIGHTS */
+
+    .insights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .insight {
+      padding: 20px;
+      background: #f8fafb;
+      border-radius: 8px;
+    }
+
+    .insight strong {
+      color: #1f3b5a;
+    }
+
+    /* DATA MODEL */
+
+    .architecture {
+      background: #1f3b5a;
+      color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      font-family: monospace;
+      white-space: pre-line;
+      line-height: 1.8;
+    }
+
+    /* TABLE */
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #e3e7ea;
+      text-align: left;
+    }
+
+    th {
+      background: #eef6fb;
+      color: #1f3b5a;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 45px;
+      color: #6c757d;
+      font-size: 0.9em;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .insights {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      h1 {
+        font-size: 2.3em;
+      }
+
+      .hero {
+        padding: 30px 22px;
+      }
+
+      .project {
+        padding: 22px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<h1>Ijaz</h1>
-<p><strong>Data Analyst</strong></p>
-<p>
-Hi! I’m a data analyst skilled in SQL, Power BI, Python, and Excel. I enjoy
-turning raw data into actionable insights that drive business decisions.
-</p>
 
-<h2>🛠 Skills</h2>
-<ul>
-  <li>SQL: Joins, CTEs, Window Functions, Aggregations</li>
-  <li>Power BI: DAX, Dashboards, Data Modeling</li>
-  <li>Excel: Pivot Tables, Charts, Formulas</li>
-</ul>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-<h2>📊 Projects</h2>
+<section class="hero">
+
+  <h1>Ijaz</h1>
+
+  <div class="hero-role">
+    Aspiring Power BI Developer | Data Analyst | BI Developer
+  </div>
+
+  <p class="hero-description">
+    PL-300 certified data analytics professional focused on transforming
+    business data into <strong>interactive Power BI dashboards,
+    actionable insights and clear data stories</strong>.
+  </p>
+
+  <p class="hero-description">
+    My primary focus is <strong>Power BI</strong>, supported by
+    <strong>SQL</strong> for data extraction, transformation and analysis,
+    and <strong>Excel</strong> for exploratory analysis and reporting.
+  </p>
+
+  <p class="hero-description">
+    I enjoy moving beyond simply reporting numbers — understanding
+    <strong>what happened, why it happened, where the business impact
+    is concentrated, and what areas may require further investigation.</strong>
+  </p>
+
+  <div class="certification">
+    ✓ Microsoft Certified: Power BI Data Analyst Associate (PL-300)
+  </div>
+
+  <div class="buttons">
+
+    <a
+      class="button"
+      href="https://github.com/Ijaz101"
+      target="_blank"
+    >
+      GitHub
+    </a>
+
+    <a
+      class="button"
+      href="https://www.linkedin.com/in/ijas-ahamed-a134aa123/"
+      target="_blank"
+    >
+      LinkedIn
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<h2>👋 About Me</h2>
 
 <div class="project">
-  <h3>CRM Sales Pipeline Dashboard (Excel)</h3>
-  <p>
-    Developed an interactive CRM Sales Dashboard using Microsoft Excel,
-    Power Query, Power Pivot, DAX, PivotTables, PivotCharts, and slicers.
-    Built a star schema data model to analyze revenue trends, product
-    performance, sales agent effectiveness, opportunity stages, and sales cycle.
-  </p>
-
-  <img src="Images/Excel-CRM-Dashboard.png" alt="CRM Sales Dashboard Screenshot">
 
   <p>
-    <a href="https://github.com/Ijaz101/Excel_CRM_Sales_Dashboard" target="_blank">
-      View Project on GitHub
-    </a>
+    I am an aspiring <strong>Power BI Developer and Data Analyst</strong>
+    building hands-on business intelligence projects using real-world
+    datasets.
   </p>
+
+  <p>
+    My work focuses on the complete analytical process:
+    <strong>understanding business questions, preparing data, building
+    analytical models, developing DAX measures, creating interactive
+    dashboards and communicating insights through data storytelling.</strong>
+  </p>
+
+  <p>
+    I am particularly interested in how BI dashboards can help
+    stakeholders move from a high-level KPI to the underlying drivers
+    of business performance.
+  </p>
+
 </div>
 
-  <div class="project">
-  <h3>GE Analytics Dashboard (Power BI)</h3>
 
-  <p>
-    Built an interactive Power BI dashboard to analyze key business
-    performance metrics. The dashboard provides insights into sales,
-    profitability, regional performance, and KPIs using interactive
-    visualizations and filters to support data-driven decision making.
-  </p>
+<!-- =========================================================
+     SKILLS
+========================================================= -->
 
-  <img src="Images/GE-Analytics.png" alt="GE Analytics Dashboard Screenshot">
+<h2>🛠 Technical Skills</h2>
 
-  <p>
-    <a href="https://github.com/Ijaz101/GE-Analytics" target="_blank">
-      View Project on GitHub
-    </a>
-  </p>
+<div class="skills">
+
+  <!-- POWER BI -->
+
+  <div class="skill-card primary">
+
+    <span class="skill-label">Primary Skill</span>
+
+    <h3>📊 Power BI</h3>
+
+    <ul>
+      <li>Interactive Dashboard Development</li>
+      <li>Data Modeling & Star Schema</li>
+      <li>DAX Measures</li>
+      <li>Time Intelligence</li>
+      <li>Power Query</li>
+      <li>KPI Development</li>
+      <li>Drill-down & Drill-through</li>
+      <li>Interactive Filters & Slicers</li>
+      <li>Dashboard Design</li>
+      <li>Data Storytelling</li>
+    </ul>
+
+  </div>
+
+
+  <!-- SQL -->
+
+  <div class="skill-card">
+
+    <span class="skill-label">Core Skill</span>
+
+    <h3>🗄 SQL</h3>
+
+    <ul>
+      <li>SQL Server</li>
+      <li>Data Extraction</li>
+      <li>Joins</li>
+      <li>CTEs</li>
+      <li>Window Functions</li>
+      <li>Aggregations</li>
+      <li>CASE Statements</li>
+      <li>Data Validation</li>
+      <li>Data Warehouse Development</li>
+      <li>ETL / ELT</li>
+    </ul>
+
+  </div>
+
+
+  <!-- EXCEL -->
+
+  <div class="skill-card">
+
+    <span class="skill-label">Supporting Skill</span>
+
+    <h3>📈 Excel</h3>
+
+    <ul>
+      <li>PivotTables</li>
+      <li>PivotCharts</li>
+      <li>Power Query</li>
+      <li>Power Pivot</li>
+      <li>DAX</li>
+      <li>Data Cleaning</li>
+      <li>Business Reporting</li>
+      <li>Interactive Dashboards</li>
+    </ul>
+
+  </div>
+
 </div>
+
+
+<!-- =========================================================
+     DATA STORYTELLING
+========================================================= -->
+
+<h2>📖 Power BI & Data Storytelling</h2>
+
+<div class="story">
+
+  <p>
+    I believe a Power BI dashboard should do more than display charts.
+    It should guide the user through a logical business story.
+  </p>
+
+  <div class="story-step">
+    <strong>1. What happened?</strong>
+
+    <p>
+      Start with the most important KPIs and trends to establish the
+      current state of the business.
+    </p>
+  </div>
+
+  <div class="story-step">
+    <strong>2. When did it happen?</strong>
+
+    <p>
+      Use time-based analysis and comparable periods to identify when
+      performance changed.
+    </p>
+  </div>
+
+  <div class="story-step">
+    <strong>3. Where is the impact?</strong>
+
+    <p>
+      Drill into categories, products, customers, countries and cities
+      to identify where changes are concentrated.
+    </p>
+  </div>
+
+  <div class="story-step">
+    <strong>4. What is driving the change?</strong>
+
+    <p>
+      Move from high-level KPIs into detailed analysis to investigate
+      the products, markets and customer behaviors associated with
+      the change.
+    </p>
+  </div>
+
+  <div class="story-step">
+    <strong>5. What should be investigated next?</strong>
+
+    <p>
+      Translate findings into business implications and identify areas
+      where stakeholders may want to investigate further.
+    </p>
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     FEATURED PROJECT
+========================================================= -->
+
+<h2>⭐ Featured Project</h2>
+
+<div class="project featured">
+
+  <span class="project-label">
+    Power BI • SQL Server • Business Intelligence
+  </span>
+
+  <h3>🌍 Global Electronics Sales Analytics Dashboard</h3>
+
+  <p>
+    An end-to-end <strong>Business Intelligence and Data Analytics
+    project</strong> analyzing sales performance for a global electronics
+    retailer across products, categories, customers and geographic markets.
+  </p>
+
+  <p>
+    The project combines <strong>SQL Server data warehousing,
+    data quality validation, Power BI data modeling, DAX time intelligence
+    and interactive dashboard design</strong> to investigate a significant
+    decline in sales performance.
+  </p>
+
+
+  <!-- BUSINESS PROBLEM -->
+
+  <div class="impact">
+
+    <h3>🎯 Business Problem</h3>
+
+    <p>
+      Global Electronics experienced a substantial decline in sales
+      compared with previous years. Management needs to understand
+      <strong>when the decline occurred, which categories and products
+      were affected, which markets contributed to the decline, how
+      customer behavior changed, and whether profitability was also
+      affected.</strong>
+    </p>
+
+    <p>
+      The dashboard was designed to provide a centralized analytical
+      view for investigating these questions.
+    </p>
+
+  </div>
+
+
+  <!-- KEY METRICS -->
+
+  <div class="metrics">
+
+    <div class="metric">
+      <span class="metric-number">49%</span>
+      <span class="metric-label">2020 Sales Decline</span>
+    </div>
+
+    <div class="metric">
+      <span class="metric-number">62%</span>
+      <span class="metric-label">Latest 12-Month Decline</span>
+    </div>
+
+    <div class="metric">
+      <span class="metric-number">75%</span>
+      <span class="metric-label">Jan–Feb 2021 Decline</span>
+    </div>
+
+    <div class="metric">
+      <span class="metric-number">$4.26M</span>
+      <span class="metric-label">Computer Revenue Decline</span>
+    </div>
+
+  </div>
+
+
+  <!-- BUSINESS STORY -->
+
+  <div class="project-section">
+
+    <h3>📖 The Business Story</h3>
+
+    <p>
+      The analysis begins with the overall sales trend, where the
+      business shows a significant deterioration in performance.
+    </p>
+
+    <p>
+      From there, the dashboard moves into category-level analysis to
+      determine where the largest revenue impact is concentrated.
+      The analysis then drills down to individual products to understand
+      which high-revenue products contributed to those category declines.
+    </p>
+
+    <p>
+      Geographic analysis then moves from <strong>Region → Country →
+      City</strong>, revealing that although major markets experienced
+      significant declines, performance was not uniform across individual
+      cities.
+    </p>
+
+    <p>
+      Finally, customer and profitability analysis provides additional
+      context around the overall change in business performance.
+    </p>
+
+  </div>
+
+
+  <!-- KEY INSIGHTS -->
+
+  <div class="project-section">
+
+    <h3>🔎 Key Business Insights</h3>
+
+    <div class="insights">
+
+      <div class="insight">
+
+        <strong>Overall Sales Decline</strong>
+
+        <p>
+          2020 sales were approximately 49% lower than 2019.
+          The latest 12-month period, March 2020–February 2021,
+          generated approximately $6.9M compared with $18.5M in the
+          previous comparable period.
+        </p>
+
+      </div>
+
+
+      <div class="insight">
+
+        <strong>Computers Had the Largest Absolute Impact</strong>
+
+        <p>
+          Computers represent roughly one-third of revenue and
+          experienced an approximately $4.26M year-over-year decline,
+          making the category particularly important when investigating
+          the overall sales reduction.
+        </p>
+
+      </div>
+
+
+      <div class="insight">
+
+        <strong>Decline Was Broad Across Categories</strong>
+
+        <p>
+          Home Appliances declined by approximately $1.87M,
+          Cameras & Camcorders by approximately $1.50M, and
+          Cell Phones by approximately $1.44M.
+        </p>
+
+      </div>
+
+
+      <div class="insight">
+
+        <strong>Product-Level Declines Were Significant</strong>
+
+        <p>
+          Multiple high-revenue products experienced substantial
+          reductions, showing that the overall decline was not caused
+          by a single product.
+        </p>
+
+      </div>
+
+
+      <div class="insight">
+
+        <strong>Geographic Decline Was Broad-Based</strong>
+
+        <p>
+          All five major markets analyzed experienced substantial
+          year-over-year declines, ranging from approximately 59.8%
+          to 68.4%.
+        </p>
+
+      </div>
+
+
+      <div class="insight">
+
+        <strong>City-Level Performance Varied</strong>
+
+        <p>
+          Despite broad country-level declines, some cities remained
+          relatively stable or emerged as new contributors, showing
+          why country-level KPIs alone can hide important local trends.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- GEOGRAPHIC ANALYSIS -->
+
+  <div class="project-section">
+
+    <h3>🌍 Geographic Analysis</h3>
+
+    <p>
+      Geographic performance was analyzed using a
+      <strong>Region → Country → City</strong> drill-down approach.
+    </p>
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th>LY Sales</th>
+            <th>CY Sales</th>
+            <th>YoY Change</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>United States</td>
+            <td>$10.2M</td>
+            <td>$4.1M</td>
+            <td>-59.8%</td>
+          </tr>
+
+          <tr>
+            <td>United Kingdom</td>
+            <td>$2.1M</td>
+            <td>$0.7M</td>
+            <td>-66.7%</td>
+          </tr>
+
+          <tr>
+            <td>Germany</td>
+            <td>$1.9M</td>
+            <td>$0.6M</td>
+            <td>-68.4%</td>
+          </tr>
+
+          <tr>
+            <td>Canada</td>
+            <td>$1.5M</td>
+            <td>$0.6M</td>
+            <td>-60.0%</td>
+          </tr>
+
+          <tr>
+            <td>Australia</td>
+            <td>$0.9M</td>
+            <td>$0.3M</td>
+            <td>-66.7%</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <p>
+      The city-level analysis adds important context. For example,
+      within the United States, Portland declined approximately 87.2%
+      while Dallas remained relatively stable with an approximately
+      4.8% decline. Other cities, including Baton Rouge and Saginaw,
+      recorded growth from their previous-year bases.
+    </p>
+
+    <p>
+      These differences demonstrate the importance of drilling beyond
+      country-level KPIs when investigating business performance.
+    </p>
+
+  </div>
+
+
+  <!-- CUSTOMER -->
+
+  <div class="project-section">
+
+    <h3>👥 Customer Analysis</h3>
+
+    <p>
+      Customer analytics was used to investigate customer segments,
+      purchasing behavior, average order value, orders per customer,
+      repeat customer activity and customer contribution to sales.
+    </p>
+
+    <p>
+      This analysis helps investigate whether changes in revenue may be
+      associated with customer volume, purchasing frequency, order value,
+      or a combination of these factors.
+    </p>
+
+  </div>
+
+
+  <!-- PROFITABILITY -->
+
+  <div class="project-section">
+
+    <h3>💰 Profitability Analysis</h3>
+
+    <p>
+      Sales performance was analyzed alongside cost and profit metrics
+      to distinguish between <strong>revenue decline and profitability
+      decline</strong>.
+    </p>
+
+    <p>
+      This provides additional context when evaluating the areas that
+      may require further business investigation.
+    </p>
+
+  </div>
+
+
+  <!-- BUSINESS IMPACT -->
+
+  <div class="impact">
+
+    <h3>💡 Business Implications</h3>
+
+    <p>
+      The analysis highlights several areas for management to
+      investigate further:
+    </p>
+
+    <ul>
+      <li>
+        High-revenue categories with large absolute declines.
+      </li>
+
+      <li>
+        High-performing products experiencing substantial reductions.
+      </li>
+
+      <li>
+        Major geographic markets with significant contraction.
+      </li>
+
+      <li>
+        Cities showing resilience or emerging as new contributors.
+      </li>
+
+      <li>
+        Changes in customer purchasing behavior.
+      </li>
+
+      <li>
+        The relationship between declining sales and profitability.
+      </li>
+    </ul>
+
+    <p>
+      These findings provide starting points for deeper investigation
+      rather than assuming a single cause for the overall decline.
+    </p>
+
+  </div>
+
+
+  <!-- DASHBOARD -->
+
+  <div class="project-section">
+
+    <h3>📊 Power BI Dashboard</h3>
+
+    <p>
+      The dashboard is structured to move from executive-level KPIs
+      toward detailed product, customer and geographic analysis.
+    </p>
+
+    <img
+      class="project-image"
+      src="Images/GE-Analytics.png"
+      alt="Global Electronics Power BI Analytics Dashboard"
+    >
+
+  </div>
+
+
+  <!-- TECHNICAL -->
+
+  <div class="project-section">
+
+    <h3>⚙️ Technical Implementation</h3>
+
+    <ul>
+
+      <li>
+        <strong>SQL Server:</strong>
+        Data warehouse development and analytical data preparation.
+      </li>
+
+      <li>
+        <strong>Medallion Architecture:</strong>
+        Bronze, Silver and Gold data layers.
+      </li>
+
+      <li>
+        <strong>Data Quality:</strong>
+        Duplicate checks, null validation, data types,
+        referential integrity and business-rule validation.
+      </li>
+
+      <li>
+        <strong>Data Modeling:</strong>
+        Star-schema Power BI model using fact and dimension tables.
+      </li>
+
+      <li>
+        <strong>DAX:</strong>
+        Sales, profit, margin, YoY analysis, time intelligence,
+        average order value and customer metrics.
+      </li>
+
+      <li>
+        <strong>Power BI:</strong>
+        Interactive dashboards, drill-down analysis, filters,
+        KPIs and business-focused visual storytelling.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <!-- DATA ARCHITECTURE -->
+
+  <div class="project-section">
+
+    <h3>🏗️ Data Architecture</h3>
+
+    <div class="architecture">
+Source CSV Files
+        ↓
+Bronze Layer — Raw Data
+        ↓
+Silver Layer — Cleaned & Validated Data
+        ↓
+Gold Layer — Business-Ready Data
+        ↓
+Power BI Data Model
+        ↓
+DAX Measures
+        ↓
+Interactive Dashboard
+        ↓
+Business Insights
+    </div>
+
+  </div>
+
+
+  <!-- DATA MODEL -->
+
+  <div class="project-section">
+
+    <h3>🧩 Power BI Data Model</h3>
+
+    <div class="architecture">
+                 Dim_Customers
+                       │
+                       │
+Dim_Date ─────── Fact_Sales ─────── Dim_Products
+                       │
+                       │
+                  Dim_Stores
+                       │
+                       │
+              Dim_ExchangeRates
+    </div>
+
+    <p>
+      The star schema separates transactional business events from
+      descriptive dimensions and provides a structured foundation for
+      analytical reporting.
+    </p>
+
+  </div>
+
+
+  <!-- DEBUGGING -->
+
+  <div class="project-section">
+
+    <h3>🐞 Problem Solving & Power BI Debugging</h3>
+
+    <p>
+      During development, one KPI produced unexpected results because
+      a hidden <strong>Year filter/slicer</strong> was affecting the
+      report page.
+    </p>
+
+    <p>
+      Instead of immediately rewriting the DAX, the issue was
+      investigated through the report's filter context and visual
+      configuration.
+    </p>
+
+    <div class="impact">
+
+      <strong>Key Learning:</strong>
+
+      <p>
+        When a Power BI result looks incorrect, validate the
+        <strong>filter context, model relationships and visual
+        configuration</strong> before assuming the DAX calculation
+        is incorrect.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- GITHUB -->
+
+  <p style="margin-top: 30px;">
+
+    <a
+      class="button"
+      href="https://github.com/Ijaz101/GE-Analytics"
+      target="_blank"
+    >
+      View Full Project on GitHub →
+    </a>
+
+  </p>
+
+</div>
+
+
+<!-- =========================================================
+     EXCEL PROJECT
+========================================================= -->
+
+<h2>📈 Other Project</h2>
+
+<div class="project">
+
+  <span class="project-label">
+    Excel Analytics Project
+  </span>
+
+  <h3>CRM Sales Pipeline Dashboard</h3>
+
+  <p>
+    Developed an interactive CRM Sales Dashboard using Microsoft Excel
+    to analyze sales pipeline performance, revenue trends, product
+    performance, sales agent effectiveness, opportunity stages and
+    sales cycle information.
+  </p>
+
+  <h3>Business Questions</h3>
+
+  <ul>
+
+    <li>
+      How is the sales pipeline performing?
+    </li>
+
+    <li>
+      Which products are generating the most revenue?
+    </li>
+
+    <li>
+      How are sales agents performing?
+    </li>
+
+    <li>
+      How are opportunities distributed across pipeline stages?
+    </li>
+
+    <li>
+      What patterns can be identified in the sales cycle?
+    </li>
+
+  </ul>
+
+  <h3>Technical Implementation</h3>
+
+  <ul>
+
+    <li>Power Query</li>
+    <li>Power Pivot</li>
+    <li>DAX</li>
+    <li>PivotTables</li>
+    <li>PivotCharts</li>
+    <li>Interactive slicers</li>
+    <li>Star-schema data model</li>
+
+  </ul>
+
+  <img
+    class="project-image"
+    src="Images/Excel-CRM-Dashboard.png"
+    alt="CRM Sales Pipeline Excel Dashboard"
+  >
+
+  <p style="margin-top: 20px;">
+
+    <a
+      class="button"
+      href="https://github.com/Ijaz101/Excel_CRM_Sales_Dashboard"
+      target="_blank"
+    >
+      View Excel Project on GitHub →
+    </a>
+
+  </p>
+
+</div>
+
+
+<!-- =========================================================
+     ANALYTICAL APPROACH
+========================================================= -->
+
+<h2>🔍 My Analytical Approach</h2>
+
+<div class="project">
+
+  <div class="story-step">
+
+    <strong>Business Understanding</strong>
+
+    <p>
+      Start by understanding the business context and identifying
+      the questions that the analysis needs to answer.
+    </p>
+
+  </div>
+
+  <div class="story-step">
+
+    <strong>Data Preparation</strong>
+
+    <p>
+      Clean, transform and validate the data before using it for
+      analysis.
+    </p>
+
+  </div>
+
+  <div class="story-step">
+
+    <strong>Data Modeling</strong>
+
+    <p>
+      Build structured analytical models that support reliable
+      calculations and efficient reporting.
+    </p>
+
+  </div>
+
+  <div class="story-step">
+
+    <strong>Analysis</strong>
+
+    <p>
+      Analyze trends, categories, products, customers and markets
+      to identify meaningful patterns.
+    </p>
+
+  </div>
+
+  <div class="story-step">
+
+    <strong>Data Storytelling</strong>
+
+    <p>
+      Organize visuals so users can move naturally from
+      <strong>What happened?</strong> to
+      <strong>Why?</strong> and
+      <strong>Where should we investigate further?</strong>
+    </p>
+
+  </div>
+
+  <div class="story-step">
+
+    <strong>Business Implications</strong>
+
+    <p>
+      Translate analytical findings into clear implications while
+      distinguishing observed evidence from assumptions or
+      recommendations.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     CAREER OBJECTIVE
+========================================================= -->
+
+<h2>🚀 Career Objective</h2>
+
+<div class="project">
+
+  <p>
+    I am currently seeking an entry-level opportunity as a
+    <strong>Power BI Developer, Business Intelligence Developer,
+    or Data Analyst</strong>.
+  </p>
+
+  <p>
+    I am particularly interested in roles where I can combine
+    <strong>Power BI, SQL and Excel</strong> to transform business data
+    into reliable analysis, interactive dashboards and decision-support
+    insights.
+  </p>
+
+  <p>
+    I am eager to continue developing my technical and analytical
+    capabilities while contributing to real-world Business Intelligence
+    projects.
+  </p>
+
+</div>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
 <h2>📬 Contact</h2>
 
 <div class="contact">
 
   <p>
-    <strong>GitHub:</strong>
-    <a href="https://github.com/Ijaz101" target="_blank">
+    <strong>GitHub:</strong><br>
+
+    <a
+      href="https://github.com/Ijaz101"
+      target="_blank"
+    >
       github.com/Ijaz101
     </a>
   </p>
 
+
   <p>
-    <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/ijas-ahamed-a134aa123/" target="_blank">
+    <strong>LinkedIn:</strong><br>
+
+    <a
+      href="https://www.linkedin.com/in/ijas-ahamed-a134aa123/"
+      target="_blank"
+    >
       linkedin.com/in/ijas-ahamed-a134aa123
     </a>
   </p>
 
+
   <p>
-    <strong>Email:</strong>
-    <a href="mailto:yourname@email.com">
+    <strong>Email:</strong><br>
+
+    <a href="mailto:Ijazahamed375@gmail.com">
       Ijazahamed375@gmail.com
     </a>
   </p>
 
 </div>
 
+
+<footer class="footer">
+
+  <p>
+    Power BI • SQL • Excel • Business Intelligence • Data Storytelling
+  </p>
+
+</footer>
+
 </body>
 </html>
+```
