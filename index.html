@@ -173,6 +173,56 @@
       font-size: 1.08em;
     }
 
+    /* PROJECT GRID */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      margin-bottom: 0;
+      min-width: 0;
+    }
+
+    .project-card h3 {
+      font-size: 1.3em;
+      line-height: 1.35;
+    }
+
+    .project-card h4 {
+      color: #1f3b5a;
+      margin: 14px 0 4px;
+    }
+
+    .project-card ul {
+      margin-top: 5px;
+      margin-bottom: 8px;
+    }
+
+    .project-tools {
+      font-size: 0.94em;
+      color: #526577;
+    }
+
+    .project-card .project-image {
+      width: 100%;
+      height: 210px;
+      object-fit: contain;
+      background: #f7f9fb;
+      margin-top: auto;
+    }
+
+    .project-link {
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+
     /* FEATURED PROJECT */
 
     .project {
@@ -327,6 +377,15 @@
     /* RESPONSIVE */
 
     @media (max-width: 800px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card .project-image {
+        height: auto;
+        max-height: 320px;
+      }
+
       .skills {
         grid-template-columns: 1fr;
       }
@@ -407,6 +466,7 @@
       class="button"
       href="https://github.com/Ijaz101"
       target="_blank"
+      rel="noopener noreferrer"
     >
       GitHub
     </a>
@@ -415,6 +475,7 @@
       class="button"
       href="https://www.linkedin.com/in/ijas-ahamed-a134aa123/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       LinkedIn
     </a>
@@ -597,386 +658,41 @@
 
 
 <!-- =========================================================
-     FEATURED PROJECT
+     PROJECTS
 ========================================================= -->
 
-<h2>⭐ Featured Project</h2>
+<h2>📊 Projects</h2>
 
-<div class="project featured">
+<div class="projects-grid">
 
-  <span class="project-label">
-    Power BI • SQL Server • Business Intelligence
-  </span>
+  <!-- GLOBAL ELECTRONICS PROJECT -->
 
-  <h3>🌍 Global Electronics Sales Analytics Dashboard</h3>
+  <div class="project project-card">
 
-  <p>
-    An end-to-end <strong>Business Intelligence and Data Analytics
-    project</strong> analyzing sales performance for a global electronics
-    retailer across products, categories, customers and geographic markets.
-  </p>
+    <span class="project-label">
+      Power BI • SQL Server • Business Intelligence
+    </span>
 
-  <p>
-    The project combines <strong>SQL Server data warehousing,
-    data quality validation, Power BI data modeling, DAX time intelligence
-    and interactive dashboard design</strong> to investigate a significant
-    decline in sales performance.
-  </p>
-
-
-  <!-- BUSINESS PROBLEM -->
-
-  <div class="impact">
-
-    <h3>🎯 Business Problem</h3>
+    <h3>🌍 Global Electronics Sales Analytics</h3>
 
     <p>
-      Global Electronics experienced a substantial decline in sales
-      compared with previous years. Management needs to understand
-      <strong>when the decline occurred, which categories and products
-      were affected, which markets contributed to the decline, how
-      customer behavior changed, and whether profitability was also
-      affected.</strong>
+      An end-to-end analytics project investigating sales performance
+      across products, categories, customers and geographic markets.
+      Built with SQL Server and Power BI.
     </p>
 
-    <p>
-      The dashboard was designed to provide a centralized analytical
-      view for investigating these questions.
-    </p>
-
-  </div>
-
-
-  <!-- KEY METRICS -->
-
-  <div class="metrics">
-
-    <div class="metric">
-      <span class="metric-number">49%</span>
-      <span class="metric-label">2020 Sales Decline</span>
-    </div>
-
-    <div class="metric">
-      <span class="metric-number">62%</span>
-      <span class="metric-label">Latest 12-Month Decline</span>
-    </div>
-
-    <div class="metric">
-      <span class="metric-number">75%</span>
-      <span class="metric-label">Jan–Feb 2021 Decline</span>
-    </div>
-
-    <div class="metric">
-      <span class="metric-number">$4.26M</span>
-      <span class="metric-label">Computer Revenue Decline</span>
-    </div>
-
-  </div>
-
-
-  <!-- BUSINESS STORY -->
-
-  <div class="project-section">
-
-    <h3>📖 The Business Story</h3>
-
-    <p>
-      The analysis begins with the overall sales trend, where the
-      business shows a significant deterioration in performance.
-    </p>
-
-    <p>
-      From there, the dashboard moves into category-level analysis to
-      determine where the largest revenue impact is concentrated.
-      The analysis then drills down to individual products to understand
-      which high-revenue products contributed to those category declines.
-    </p>
-
-    <p>
-      Geographic analysis then moves from <strong>Region → Country →
-      City</strong>, revealing that although major markets experienced
-      significant declines, performance was not uniform across individual
-      cities.
-    </p>
-
-    <p>
-      Finally, customer and profitability analysis provides additional
-      context around the overall change in business performance.
-    </p>
-
-  </div>
-
-
-  <!-- KEY INSIGHTS -->
-
-  <div class="project-section">
-
-    <h3>🔎 Key Business Insights</h3>
-
-    <div class="insights">
-
-      <div class="insight">
-
-        <strong>Overall Sales Decline</strong>
-
-        <p>
-          2020 sales were approximately 49% lower than 2019.
-          The latest 12-month period, March 2020–February 2021,
-          generated approximately $6.9M compared with $18.5M in the
-          previous comparable period.
-        </p>
-
-      </div>
-
-
-      <div class="insight">
-
-        <strong>Computers Had the Largest Absolute Impact</strong>
-
-        <p>
-          Computers represent roughly one-third of revenue and
-          experienced an approximately $4.26M year-over-year decline,
-          making the category particularly important when investigating
-          the overall sales reduction.
-        </p>
-
-      </div>
-
-
-      <div class="insight">
-
-        <strong>Decline Was Broad Across Categories</strong>
-
-        <p>
-          Home Appliances declined by approximately $1.87M,
-          Cameras & Camcorders by approximately $1.50M, and
-          Cell Phones by approximately $1.44M.
-        </p>
-
-      </div>
-
-
-      <div class="insight">
-
-        <strong>Product-Level Declines Were Significant</strong>
-
-        <p>
-          Multiple high-revenue products experienced substantial
-          reductions, showing that the overall decline was not caused
-          by a single product.
-        </p>
-
-      </div>
-
-
-      <div class="insight">
-
-        <strong>Geographic Decline Was Broad-Based</strong>
-
-        <p>
-          All five major markets analyzed experienced substantial
-          year-over-year declines, ranging from approximately 59.8%
-          to 68.4%.
-        </p>
-
-      </div>
-
-
-      <div class="insight">
-
-        <strong>City-Level Performance Varied</strong>
-
-        <p>
-          Despite broad country-level declines, some cities remained
-          relatively stable or emerged as new contributors, showing
-          why country-level KPIs alone can hide important local trends.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- GEOGRAPHIC ANALYSIS -->
-
-  <div class="project-section">
-
-    <h3>🌍 Geographic Analysis</h3>
-
-    <p>
-      Geographic performance was analyzed using a
-      <strong>Region → Country → City</strong> drill-down approach.
-    </p>
-
-    <div class="table-container">
-
-      <table>
-
-        <thead>
-          <tr>
-            <th>Market</th>
-            <th>LY Sales</th>
-            <th>CY Sales</th>
-            <th>YoY Change</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>United States</td>
-            <td>$10.2M</td>
-            <td>$4.1M</td>
-            <td>-59.8%</td>
-          </tr>
-
-          <tr>
-            <td>United Kingdom</td>
-            <td>$2.1M</td>
-            <td>$0.7M</td>
-            <td>-66.7%</td>
-          </tr>
-
-          <tr>
-            <td>Germany</td>
-            <td>$1.9M</td>
-            <td>$0.6M</td>
-            <td>-68.4%</td>
-          </tr>
-
-          <tr>
-            <td>Canada</td>
-            <td>$1.5M</td>
-            <td>$0.6M</td>
-            <td>-60.0%</td>
-          </tr>
-
-          <tr>
-            <td>Australia</td>
-            <td>$0.9M</td>
-            <td>$0.3M</td>
-            <td>-66.7%</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </div>
-
-    <p>
-      The city-level analysis adds important context. For example,
-      within the United States, Portland declined approximately 87.2%
-      while Dallas remained relatively stable with an approximately
-      4.8% decline. Other cities, including Baton Rouge and Saginaw,
-      recorded growth from their previous-year bases.
-    </p>
-
-    <p>
-      These differences demonstrate the importance of drilling beyond
-      country-level KPIs when investigating business performance.
-    </p>
-
-  </div>
-
-
-  <!-- CUSTOMER -->
-
-  <div class="project-section">
-
-    <h3>👥 Customer Analysis</h3>
-
-    <p>
-      Customer analytics was used to investigate customer segments,
-      purchasing behavior, average order value, orders per customer,
-      repeat customer activity and customer contribution to sales.
-    </p>
-
-    <p>
-      This analysis helps investigate whether changes in revenue may be
-      associated with customer volume, purchasing frequency, order value,
-      or a combination of these factors.
-    </p>
-
-  </div>
-
-
-  <!-- PROFITABILITY -->
-
-  <div class="project-section">
-
-    <h3>💰 Profitability Analysis</h3>
-
-    <p>
-      Sales performance was analyzed alongside cost and profit metrics
-      to distinguish between <strong>revenue decline and profitability
-      decline</strong>.
-    </p>
-
-    <p>
-      This provides additional context when evaluating the areas that
-      may require further business investigation.
-    </p>
-
-  </div>
-
-
-  <!-- BUSINESS IMPACT -->
-
-  <div class="impact">
-
-    <h3>💡 Business Implications</h3>
-
-    <p>
-      The analysis highlights several areas for management to
-      investigate further:
-    </p>
-
+    <h4>Key Highlights</h4>
     <ul>
-      <li>
-        High-revenue categories with large absolute declines.
-      </li>
-
-      <li>
-        High-performing products experiencing substantial reductions.
-      </li>
-
-      <li>
-        Major geographic markets with significant contraction.
-      </li>
-
-      <li>
-        Cities showing resilience or emerging as new contributors.
-      </li>
-
-      <li>
-        Changes in customer purchasing behavior.
-      </li>
-
-      <li>
-        The relationship between declining sales and profitability.
-      </li>
+      <li>Analyzed year-over-year sales trends and a significant sales decline.</li>
+      <li>Identified categories and products with the largest revenue reductions.</li>
+      <li>Explored performance across regions, countries and cities.</li>
+      <li>Reviewed customer metrics and profitability.</li>
     </ul>
 
-    <p>
-      These findings provide starting points for deeper investigation
-      rather than assuming a single cause for the overall decline.
-    </p>
-
-  </div>
-
-
-  <!-- DASHBOARD -->
-
-  <div class="project-section">
-
-    <h3>📊 Power BI Dashboard</h3>
-
-    <p>
-      The dashboard is structured to move from executive-level KPIs
-      toward detailed product, customer and geographic analysis.
+    <h4>Tools & Techniques</h4>
+    <p class="project-tools">
+      SQL Server · Data Warehousing · Medallion Architecture ·
+      Star Schema · DAX · Power BI
     </p>
 
     <img
@@ -985,239 +701,68 @@
       alt="Global Electronics Power BI Analytics Dashboard"
     >
 
+    <p class="project-link">
+      <a
+        class="button"
+        href="https://github.com/Ijaz101/GE-Analytics"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project on GitHub →
+      </a>
+    </p>
+
   </div>
 
 
-  <!-- TECHNICAL -->
+  <!-- CRM EXCEL PROJECT -->
 
-  <div class="project-section">
+  <div class="project project-card">
 
-    <h3>⚙️ Technical Implementation</h3>
+    <span class="project-label">
+      Excel • Power Query • Power Pivot
+    </span>
 
+    <h3>📈 CRM Sales Pipeline Dashboard</h3>
+
+    <p>
+      Developed an interactive Excel dashboard to analyze sales pipeline
+      performance, revenue trends, product performance, sales agent
+      effectiveness, opportunity stages and sales cycle information.
+    </p>
+
+    <h4>Key Business Questions</h4>
     <ul>
-
-      <li>
-        <strong>SQL Server:</strong>
-        Data warehouse development and analytical data preparation.
-      </li>
-
-      <li>
-        <strong>Medallion Architecture:</strong>
-        Bronze, Silver and Gold data layers.
-      </li>
-
-      <li>
-        <strong>Data Quality:</strong>
-        Duplicate checks, null validation, data types,
-        referential integrity and business-rule validation.
-      </li>
-
-      <li>
-        <strong>Data Modeling:</strong>
-        Star-schema Power BI model using fact and dimension tables.
-      </li>
-
-      <li>
-        <strong>DAX:</strong>
-        Sales, profit, margin, YoY analysis, time intelligence,
-        average order value and customer metrics.
-      </li>
-
-      <li>
-        <strong>Power BI:</strong>
-        Interactive dashboards, drill-down analysis, filters,
-        KPIs and business-focused visual storytelling.
-      </li>
-
+      <li>How is the sales pipeline performing?</li>
+      <li>Which products generate the most revenue?</li>
+      <li>How are sales agents performing?</li>
+      <li>How are opportunities distributed across pipeline stages?</li>
     </ul>
 
-  </div>
-
-
-  <!-- DATA ARCHITECTURE -->
-
-  <div class="project-section">
-
-    <h3>🏗️ Data Architecture</h3>
-
-    <div class="architecture">
-Source CSV Files
-        ↓
-Bronze Layer — Raw Data
-        ↓
-Silver Layer — Cleaned & Validated Data
-        ↓
-Gold Layer — Business-Ready Data
-        ↓
-Power BI Data Model
-        ↓
-DAX Measures
-        ↓
-Interactive Dashboard
-        ↓
-Business Insights
-    </div>
-
-  </div>
-
-
-  <!-- DATA MODEL -->
-
-  <div class="project-section">
-
-    <h3>🧩 Power BI Data Model</h3>
-
-    <div class="architecture">
-                 Dim_Customers
-                       │
-                       │
-Dim_Date ─────── Fact_Sales ─────── Dim_Products
-                       │
-                       │
-                  Dim_Stores
-                       │
-                       │
-              Dim_ExchangeRates
-    </div>
-
-    <p>
-      The star schema separates transactional business events from
-      descriptive dimensions and provides a structured foundation for
-      analytical reporting.
+    <h4>Tools & Techniques</h4>
+    <p class="project-tools">
+      Excel · Power Query · Power Pivot · DAX · PivotTables ·
+      PivotCharts · Slicers · Star Schema
     </p>
 
-  </div>
-
-
-  <!-- DEBUGGING -->
-
-  <div class="project-section">
-
-    <h3>🐞 Problem Solving & Power BI Debugging</h3>
-
-    <p>
-      During development, one KPI produced unexpected results because
-      a hidden <strong>Year filter/slicer</strong> was affecting the
-      report page.
-    </p>
-
-    <p>
-      Instead of immediately rewriting the DAX, the issue was
-      investigated through the report's filter context and visual
-      configuration.
-    </p>
-
-    <div class="impact">
-
-      <strong>Key Learning:</strong>
-
-      <p>
-        When a Power BI result looks incorrect, validate the
-        <strong>filter context, model relationships and visual
-        configuration</strong> before assuming the DAX calculation
-        is incorrect.
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <!-- GITHUB -->
-
-  <p style="margin-top: 30px;">
-
-    <a
-      class="button"
-      href="https://github.com/Ijaz101/GE-Analytics"
-      target="_blank"
+    <img
+      class="project-image"
+      src="Images/Excel-CRM-Dashboard.png"
+      alt="CRM Sales Pipeline Excel Dashboard"
     >
-      View Full Project on GitHub →
-    </a>
 
-  </p>
+    <p class="project-link">
+      <a
+        class="button"
+        href="https://github.com/Ijaz101/Excel_CRM_Sales_Dashboard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project on GitHub →
+      </a>
+    </p>
 
-</div>
-
-
-<!-- =========================================================
-     EXCEL PROJECT
-========================================================= -->
-
-<h2>📈 Other Project</h2>
-
-<div class="project">
-
-  <span class="project-label">
-    Excel Analytics Project
-  </span>
-
-  <h3>CRM Sales Pipeline Dashboard</h3>
-
-  <p>
-    Developed an interactive CRM Sales Dashboard using Microsoft Excel
-    to analyze sales pipeline performance, revenue trends, product
-    performance, sales agent effectiveness, opportunity stages and
-    sales cycle information.
-  </p>
-
-  <h3>Business Questions</h3>
-
-  <ul>
-
-    <li>
-      How is the sales pipeline performing?
-    </li>
-
-    <li>
-      Which products are generating the most revenue?
-    </li>
-
-    <li>
-      How are sales agents performing?
-    </li>
-
-    <li>
-      How are opportunities distributed across pipeline stages?
-    </li>
-
-    <li>
-      What patterns can be identified in the sales cycle?
-    </li>
-
-  </ul>
-
-  <h3>Technical Implementation</h3>
-
-  <ul>
-
-    <li>Power Query</li>
-    <li>Power Pivot</li>
-    <li>DAX</li>
-    <li>PivotTables</li>
-    <li>PivotCharts</li>
-    <li>Interactive slicers</li>
-    <li>Star-schema data model</li>
-
-  </ul>
-
-  <img
-    class="project-image"
-    src="Images/Excel-CRM-Dashboard.png"
-    alt="CRM Sales Pipeline Excel Dashboard"
-  >
-
-  <p style="margin-top: 20px;">
-
-    <a
-      class="button"
-      href="https://github.com/Ijaz101/Excel_CRM_Sales_Dashboard"
-      target="_blank"
-    >
-      View Excel Project on GitHub →
-    </a>
-
-  </p>
+  </div>
 
 </div>
 
@@ -1346,6 +891,7 @@ Dim_Date ─────── Fact_Sales ─────── Dim_Products
     <a
       href="https://github.com/Ijaz101"
       target="_blank"
+      rel="noopener noreferrer"
     >
       github.com/Ijaz101
     </a>
@@ -1358,6 +904,7 @@ Dim_Date ─────── Fact_Sales ─────── Dim_Products
     <a
       href="https://www.linkedin.com/in/ijas-ahamed-a134aa123/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       linkedin.com/in/ijas-ahamed-a134aa123
     </a>
